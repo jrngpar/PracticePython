@@ -33,3 +33,7 @@ def list_overlap(l1,l2):
 
 list_overlap(list_A,list_B)
 
+list_same = set(list_same)
+print(list_same)
+list_same = sorted(list_same)
+print(list_same)
