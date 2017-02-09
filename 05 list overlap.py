@@ -9,10 +9,14 @@ length_B = int(length_B)
 list_A = []
 list_B = []
 
-print(length_A)
-print(length_B)
+#print(length_A)
+#print(length_B)
 
-for x in range(0,length_A+1):
+for x in range(0,length_A):
     list_A.append(random.randint(0,99))
+    
+for x in range(0,length_B):
+    list_B.append(random.randint(0,99))
   
 print(list_A)
+print(list_B)
