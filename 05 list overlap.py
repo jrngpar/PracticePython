@@ -6,3 +6,8 @@ length_B = int(length_B)
 
 print(length_A)
 print(length_B)
+
+for x in range(0,length_A):
+    list_A.append(random.randint(0,99))
+  
+print(x)
