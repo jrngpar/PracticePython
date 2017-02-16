@@ -1,4 +1,8 @@
 import random
 
-number = randint(0,9)
+number = random.randint(1,9)
 print(number)
+
+guess = input("Guess the number from 1-9:")
+guess = int(guess)
+print(guess)
