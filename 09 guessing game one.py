@@ -7,11 +7,14 @@ guess = input("Guess the number from 1-9:")
 guess = int(guess)
 print(guess)
 
-if number==guess:
-  print("Same")
+def checker():
+  if number==guess:
+    print("Same")
   
-if number<guess:
-  print("Guess is larger")
+  if number<guess:
+    print("Guess is larger")
   
-if number>guess:
-  print("Guess is smaller")
+  if number>guess:
+    print("Guess is smaller")
+
+checker()
