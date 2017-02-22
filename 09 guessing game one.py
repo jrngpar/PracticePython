@@ -15,7 +15,7 @@ def checker():
 	if number==guess:
 		print("Good guess")
 		num_guess += 1
-		print("It took you {} guesses to get the right answer!num_guess)
+		print("It took you {} guesses to get the right answer!".format(num_guess))
 
 
 	if number<guess:
