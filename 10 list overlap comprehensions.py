@@ -1,13 +1,17 @@
 import random
 
+def get_int():
+    length = int(input())
+    return length
+
 ls_A = []
 ls_B = []
 
 #length = 5
-length1 = input("How long for list 1?\n")
-length1 = int(length1)
-length2 = input("list 2?\n")
-length2 = int(length2)
+print("Length listA?")
+length1 = get_int()
+print("\nLength of listB?")
+length2 = get_int()
 
 for i in range(length1):
     ls_A.append(random.randint(0,9))
