@@ -7,12 +7,12 @@ def check_divisors(my_int):
 	my_num=my_int
 	my_range=(2,(my_int/2)+1)
 	for x in my_range:
-		if my_num==1:
+		if my_num in (1,2):
 			print("Prime")
 			break
-		elif my_num==2:
-			print("Prime")
-			break
+		# elif my_num==2:
+		# 	print("Prime")
+		# 	break
 		elif (my_num%x==0):
 			print("Number isn't prime")
 			break
