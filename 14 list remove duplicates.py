@@ -24,7 +24,7 @@ def remove_dup_with_loop(input_list):
 
 def remove_dup_with_set(in_list):
 	make_set = set(in_list)
-	return make_set
+	return list(make_set)
 
 #print (check_list)
 
