@@ -6,9 +6,26 @@ def get_input():
 	return int(a)
 
 def calc_fibs(how_many):
-	fib_numbers = [1]
-	for x in range(0,how_many):
-		fib_numbers.append(1)
+	i = how_many
+	fib_numbers = [1,1]
+	n = 1
+	
+
+
+	for x in range(0,how_many-2):
+		# if (i == 1):
+		# 	print("[1]")
+		# 	break
+		# if (i == 2):
+		# 	print("[2]")
+		# 	break
+
+
+		first_before = fib_numbers[n]
+		second_before = fib_numbers[n-1]
+		next = first_before + second_before
+		fib_numbers.append(next)
+		n = n+1
 
 	return fib_numbers
 
