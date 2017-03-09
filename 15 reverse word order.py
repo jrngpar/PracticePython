@@ -15,4 +15,14 @@ def get_sentence():
 	user_sentence = input("What would you like reversed:\n")
 	return user_sentence
 
-print(reverse_words(get_sentence()))
+#print(reverse_words(get_sentence()))
+
+def reverse_sentence(s):
+	backwards = s[::-1]
+	return backwards
+	
+#print(reverse_sentence(get_sentence()))
+
+def other_reverse(s):
+  backwards = "".join(reversed(s))
+  return backwards
