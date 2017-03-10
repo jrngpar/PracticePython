@@ -3,3 +3,6 @@
 #Extra:
 
 #Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
+
+#use random numbers. If random number is in a range, create one digit out of a specific set of characters(numbers, letters, symbols)
+#ask user for password length and loop to make that length
