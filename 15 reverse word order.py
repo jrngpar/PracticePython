@@ -26,3 +26,20 @@ def reverse_sentence(s):
 def other_reverse(s):
   backwards = "".join(reversed(s))
   return backwards
+
+def sentence_editor():
+	user_sentence = input("Would you like to edit a sentence or quit(type 'quit')?")
+	while user_sentence != "quit":
+		my_sentence = input("Enter your sentence:")
+		which_mod = input("Reverse words(1)\nReverse letters in words(2)\nReverse entire sentence(3)\n")
+		if which_mod == "1":
+			print(reverse_words(my_sentence))
+			break
+		elif which_mod =="2":
+			print(reverse_words(other_reverse(my_sentence)))
+			break
+		else:
+			print(reverse_sentence(my_sentence))
+			break
+			
+sentence_editor()
