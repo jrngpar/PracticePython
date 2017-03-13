@@ -6,3 +6,24 @@
 
 #use random numbers. If random number is in a range, create one digit out of a specific set of characters(numbers, letters, symbols)
 #ask user for password length and loop to make that length
+
+def get_parameters():
+    generator_input = input("Want to make a password?\nEnter 'quit' to quit: ")
+    if generator_input != "quit":
+        get_strength()
+                
+def get_strength():
+        generator_input = input("How strong?\n(1)Strong\n(2)Average\n(3)Weak\n")
+        if generator_input == "1":
+            print("strong")
+            
+        elif generator_input == "2":
+            print("average")
+            
+        elif generator_input == "3":
+            print("weak")
+            
+        else:
+            print("Please enter a valid selection")
+            get_strength()
+get_parameters()        
