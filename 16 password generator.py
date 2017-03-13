@@ -6,3 +6,17 @@
 
 #use random numbers. If random number is in a range, create one digit out of a specific set of characters(numbers, letters, symbols)
 #ask user for password length and loop to make that length
+
+#use ASCII numbers?
+
+import random, string
+
+def gen_rand_number():
+	rand_num = string.digits
+	return (random.choice(rand_num))
+
+def gen_rand_letter():
+	rand_digit = string.ascii_letters
+	return (random.choice(rand_digit))
+
+print(gen_rand_number())
