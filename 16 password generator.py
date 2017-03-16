@@ -6,8 +6,7 @@
 
 #use random numbers. If random number is in a range, create one digit out of a specific set of characters(numbers, letters, symbols)
 #ask user for password length and loop to make that length
-<<<<<<< HEAD
-import random
+import random, string
 
 def get_parameters():
     generator_input = input("Want to make a password?\nEnter 'quit' to quit: ")
@@ -42,11 +41,8 @@ def get_length():
     pass_length = input("How many characters:")
     return int(pass_length)
 get_parameters()
-=======
 
-#use ASCII numbers?
 
-import random, string
 
 def gen_rand_number():
 	rand_num = string.digits
@@ -56,5 +52,4 @@ def gen_rand_letter():
 	rand_digit = string.ascii_letters
 	return (random.choice(rand_digit))
 
-print(gen_rand_number())
->>>>>>> master
+#print(gen_rand_number())
