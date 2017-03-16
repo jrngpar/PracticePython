@@ -19,6 +19,7 @@ def generate_number():
 	my_num = random.randint(1000,9999)
 	return my_num
 
+
 def check_bulls():
 	return "Bulls"
 
@@ -29,3 +30,4 @@ def main():
 	generate_number()
 
 main()
+
