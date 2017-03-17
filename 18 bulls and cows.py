@@ -17,17 +17,25 @@ import random
 
 def generate_number():
 	my_num = random.randint(1000,9999)
+	print(my_num)
 	return my_num
 
+def get_guess():
+	guess = input("Guess my number:")
+	return guess
 
-def check_bulls():
+def check_bulls(guess,my_num):
 	return "Bulls"
 
 def check_cows():
 	return "Cows"
 
-def main():
-	generate_number()
+def main(my_number):
+	b = get_guess()
+	while my_number != b:
+		bulls = check_bulls(b,my_number)
+		print (bulls)
+		break
 
-main()
 
+main(generate_number())
