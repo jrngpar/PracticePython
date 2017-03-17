@@ -8,28 +8,10 @@
 #ask user for password length and loop to make that length
 import random, string
 
-def get_parameters():
-    generator_input = input("Want to make a password?\nEnter 'quit' to quit: ")
-    if generator_input != "quit":
-        make_password(get_length())
-                
-            
-def make_password(length):
-    password = []
-    generator_input = input("How strong?\n(1)Strong\n(2)Average\n(3)Weak\n")
-    if generator_input == "1":
-        for x in range(0,length):
-            password.append(gen_symbol())
-    elif generator_input == "2":
-        print("average")
-    elif generator_input == "3":
-        print("weak")
-    else:
-        print("Please enter a valid selection")
-        get_strength()
-    
-    print("".join(password))
-    
+# def get_parameters():
+#     generator_input = input("Want to make a password?\nEnter 'quit' to quit: ")
+#     main(get_length())
+                    
     
 def gen_symbol():
     symbol_list = ["!","@","%","^","&","/","(",")",":","~",";"]
@@ -40,9 +22,6 @@ def gen_symbol():
 def get_length():
     pass_length = input("How many characters:")
     return int(pass_length)
-get_parameters()
-
-
 
 def gen_rand_number():
 	rand_num = string.digits
@@ -53,3 +32,35 @@ def gen_rand_letter():
 	return (random.choice(rand_digit))
 
 #print(gen_rand_number())
+def main(length):
+    password = []
+    generator_input = input("How strong?\n(1)Strong\n(2)Average\n(3)Weak\n")
+    if generator_input == "1":
+        for x in range(0,length):
+            digit = random.randint(1,4)
+            if digit == 1:
+                password.append(gen_symbol())
+            elif digit ==3:
+                password.append(gen_rand_number())
+            else:
+                password.append(gen_rand_letter())
+    elif generator_input == "2":
+        for x in range(0,length):
+            digit = random.randint(1,3)
+            if digit == 1:
+                password.append(gen_rand_number())
+            else:
+                password.append(gen_rand_letter())
+        #print("average")
+    elif generator_input == "3":
+        for x in range(0,length):
+            password.append(gen_rand_letter())
+        #print("weak")
+    else:
+        print("Please enter a valid selection")
+        get_strength()
+    print("".join(password))
+
+main(get_length())
+
+    
