@@ -20,51 +20,56 @@ count = 1
 def generate_number():
 	my_num = (random.sample(range(0,9),4))
 	my_num = "".join(map(str,my_num))
+	print("\nGuess my 4 digit number:")
 	print(my_num)
 	return (my_num)
 
 def get_guess():
 	guess = input(">>>")
 	# if len(guess) != 4:
+	# 	print("4 digits please")
 	# 	get_guess()
 	return guess
 
+
+
 def check_bulls(guess, my_num):
 	bulls = 0
-	my_num = str(my_num)
 	guess = str(guess)
 	#print(guess)
 	for x in range(len(guess)):
 		if my_num[x] == guess[x]:
-			bulls = bulls + 1
+			bulls += 1
 	return (bulls)
 
 def check_cows(guess, my_num):
 	cows = 0
-	my_num = str(my_num)
 	guess = str(guess)
 	overlap = set([x for x in guess if x in my_num])
 	#print (overlap)
 	for x in overlap:
+		#print("X in cows is:" + x)
 		cows = cows +1
 	return (cows)
 
 def main(my_number):
 	global count
-	print("\nGuess my 4 digit number:")
+	
+	b = get_guess()
+	#print("number: " + str(my_number))
+	#print("guess:  "+ str(b))
 
-	b = int(get_guess())
-
-	if int(my_number) != b:
+	if my_number != b:
 		bulls = check_bulls(b,my_number)
-		print (bulls)
+		#print ("Bulls: " + str(bulls))
 		cows = check_cows(b,my_number)
 		cows = cows - bulls
-		print(cows)
+		#print("Cows: " + str(cows))
+		print("{} cows and {} bulls\nGuess again!".format(cows, bulls))
 		count = count+1
 		main(my_number)
 
 	else:
-		print("Nice, you got it!\nGuesses:" + str( count))
+		print("Nice, you got it!\nGuesses:" + str(count))
 
 main(generate_number())
