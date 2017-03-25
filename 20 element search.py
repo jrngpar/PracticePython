@@ -35,3 +35,5 @@ def main():
 	print(binary_search(my_num,the_list))
 
 main()
+
+#http://interactivepython.org/courselib/static/pythonds/SortSearch/TheBinarySearch.html
